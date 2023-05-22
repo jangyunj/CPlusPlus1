@@ -1,20 +1,22 @@
-#include <iostream>
-
 class Solution
 {
 public:
-    std::vector<int> runningSum(std::vector<int> &nums)
+    string mergeAlternatively(string word1, string word2)
     {
-        std::vector<int> results(nums.size());
-        results[0] = nums[0];
-        for (int i = 1; i < nums.size(); i++)
+        string merged = "";
+        int len1 = word1.length();
+        int len2 = word2.length();
+        for (int i = 0; i < max(len1, len2); i++)
         {
-            results[i] = nums[i] + results[i - 1];
+            if (i < len1)
+            {
+                merged += word1[i];
+            }
+            if (i < len2)
+            {
+                merged += word2[i];
+            }
         }
-        return results;
+        return merged;
     }
 };
-
-// std::vector is dynamic sequence containers (arrays) that can change in size as elements are added
-// std::array is fixed sized and cannot be resized once initialized
-// variable that points to an address of another variable and not its value. When creating a pointer, use an asterisk (*); when determining the address of the variable, the ampersand (&), or the address-of operator, will display this value.
