@@ -1,22 +1,24 @@
 class Solution
 {
 public:
-    string mergeAlternatively(string word1, string word2)
+    char findTheDifference(string s, string t)
     {
-        string merged = "";
-        int len1 = word1.length();
-        int len2 = word2.length();
-        for (int i = 0; i < max(len1, len2); i++)
+        int sum = 0;
+        int sum1 = 0;
+
+        for (int i = 0; i < s.length(); i++)
         {
-            if (i < len1)
-            {
-                merged += word1[i];
-            }
-            if (i < len2)
-            {
-                merged += word2[i];
-            }
+            char c = s[i];
+            sum += c;
         }
-        return merged;
+
+        for (int j = 0; j < t.length(); j++)
+        {
+            char c = t[j];
+            sum1 += c;
+        }
+
+        int diff = abs(sum - sum1);
+        return char(diff);
     }
-};
+}
