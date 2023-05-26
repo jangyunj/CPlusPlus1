@@ -1,24 +1,18 @@
 class Solution
 {
 public:
-    char findTheDifference(string s, string t)
+    bool isAnagram(string s, string t)
     {
-        int sum = 0;
-        int sum1 = 0;
-
-        for (int i = 0; i < s.length(); i++)
+        if (s.length() != t.length())
         {
-            char c = s[i];
-            sum += c;
+            return false;
         }
-
-        for (int j = 0; j < t.length(); j++)
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+        if (s == t)
         {
-            char c = t[j];
-            sum1 += c;
+            return true;
         }
-
-        int diff = abs(sum - sum1);
-        return char(diff);
+        return false;
     }
-}
+};
