@@ -1,11 +1,26 @@
 #include <iostream>
 
+// different namespace can have same named variables
+namespace first
+{
+    int x = 1;
+}
+
+namespace second
+{
+    int x = 2;
+}
+
 int main()
 {
-    const double PI = 3.14; // const should be uppercased
-    const int LIGHT_SPEED = 299792458;
-    double radius = 10;
-    double circumference = 2 * PI * radius;
+    // int x = 0;
+    // std::cout << x;
+    // std::cout << first::x; //:: <- scope resolution operator
+    // std::cout << second::x;
 
-    std::cout << circumference << "cm";
+    //---OR---
+    using namespace first;
+    std::cout << x;
+
+    return 0;
 }
