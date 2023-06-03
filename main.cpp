@@ -1,28 +1,14 @@
 #include <iostream>
-// using std::cout;
-// using std::string;
+#include <vector>
 
-// namespace provides a solution for preventing name conflicts in large projects; allows identically named entities in diff namespaces
-namespace first
-{
-    int x = 1;
-}
-
-namespace second
-{
-    int x = 2;
-}
+typedef std::string text_t;
+typedef int number_t;
 
 int main()
 {
-    // int x = 0;
-    // std::cout << x;
-    // std::cout << first::x; //:: <- scope resolution operator
-    // std::cout << second::x;
+    text_t firstName = "bro";
+    number_t age = 20;
 
-    //---OR---
-    using namespace first;
-    std::cout << x;
-
-    return 0;
+    std::cout << firstName << '\n';
+    std::cout << age << '\n';
 }
