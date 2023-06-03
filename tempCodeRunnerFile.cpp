@@ -1,8 +1,7 @@
-students = students - 1;
-    // students -= 1;
-    // students--;
+int main()
+// {
 
-    // students = students * 2;
-    // students*= 2;
+//     // double x = (int)3.14;
 
-    // students = students / 2;
+//     // std::cout << x;
+// }
