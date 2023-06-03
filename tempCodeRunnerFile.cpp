@@ -1,6 +1,8 @@
-int x = 0;
-    // std::cout << x;
-    // std::cout << first::x; //:: <- scope resolution operator
-    // std::cout << second::x;
+students = students - 1;
+    // students -= 1;
+    // students--;
 
-    // return 0;
+    // students = students * 2;
+    // students*= 2;
+
+    // students = students / 2;
