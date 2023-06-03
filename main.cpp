@@ -1,20 +1,24 @@
 #include <iostream>
 #include <cmath>
 
-// cout << (insertion operator)
-// cin >> (extraction operator)
-
 int main()
 {
-    double x = 3.14;
-    double y = 4;
-    double z;
+    double A;
+    double B;
+    double C;
 
-    z = pow(3, 1);
-    z = sqrt(9);
-    z = abs(-3);
-    z = round(x);
-    z = ceil(x);  // always rounds UP
-    z = floor(x); // always rounds DOWN
-    std::cout << z;
+    std::cout << "Enter side A: ";
+    std::cin >> A;
+
+    std::cout << "Enter side B: ";
+    std::cin >> B;
+
+    // a = pow(a, 2);   //reassign values
+    // b = pow(b, 2);
+    // c = sqrt(a + b);
+
+    //---OR---
+    C = sqrt(pow(A, 2) + pow(B, 2));
+
+    std::cout << "side C is: " << C;
 }
