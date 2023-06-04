@@ -1,21 +1,18 @@
-// Ternary operator
-// Condition? Expression1 : Expression2
+// Logical Operators
+//&& || !
 
 #include <iostream>
 
 int main()
 {
-    // int grade;
-    // std::cout << "What grade did you get? ";
-    // std::cin >> grade;
+    bool sunny = true;
 
-    // grade >= 60 ? std::cout << "you pass" : std::cout << "you fail";
-
-    // int number = 4;
-    // number % 2 == 0 ? std::cout << "even" : std::cout << "odd";
-
-    bool hungry = true;
-    // hungry ? std::cout << "hungry" : std::cout << "not hungry"; //You don't have to explicitly write 'true' condition
-    // OR---
-    std::cout << (hungry ? "You are hungry" : "You are full");
+    if (!sunny)
+    {
+        std::cout << "It's cloudy today";
+    }
+    else
+    {
+        std::cout << "It's sunny outside";
+    }
 }
