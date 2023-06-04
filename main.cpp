@@ -2,12 +2,8 @@
 
 int main()
 {
-    std::string name;
-    while (name.empty())
+    while (1 == 1)
     {
-        std::cout << "Enter your name: ";
-        std::getline(std::cin, name);
+        std::cout << "Help! i'm stuck in an infinite loop!";
     }
-
-    std::cout << "Hello " << name;
 }
