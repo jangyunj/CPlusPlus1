@@ -1,52 +1,44 @@
-// Switch statements - compares one value against many cases
-
 #include <iostream>
 
 int main()
 {
-    int month;
-    std::cout << "Enter the month (1-12): ";
-    std::cin >> month;
+    char op;
+    double num1;
+    double num2;
+    double result;
 
-    switch (month)
+    std::cout << "************* CALCULATOR ************* \n";
+    std::cout << "Enter either (+ - * /): ";
+    std::cin >> op;
+
+    std::cout << "Enter #1: ";
+    std::cin >> num1;
+
+    std::cout << "Enter #2: ";
+    std::cin >> num2;
+
+    switch (op)
     {
-    case 1:
-        std::cout << "It is January";
+    case '+':
+        result = num1 + num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 2:
-        std::cout << "It is February";
+    case '-':
+        result = num1 - num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 3:
-        std::cout << "It is March";
+    case '*':
+        result = num1 * num2;
+        std::cout << "Result: " << result << '\n';
         break;
-    case 4:
-        std::cout << "It is April";
-        break;
-    case 5:
-        std::cout << "It is May";
-        break;
-    case 6:
-        std::cout << "It is June";
-        break;
-    case 7:
-        std::cout << "It is July";
-        break;
-    case 8:
-        std::cout << "It is August";
-        break;
-    case 9:
-        std::cout << "It is September";
-        break;
-    case 10:
-        std::cout << "It is October";
-        break;
-    case 11:
-        std::cout << "It is November";
-        break;
-    case 12:
-        std::cout << "It is December";
+    case '/':
+        result = num1 / num2;
+        std::cout << "Result: " << result << '\n';
         break;
     default:
-        std::cout << "Please enter only numbers 1-12";
+        std::cout << "Enter a valid operator." << '\n';
+        break;
     }
+
+    std::cout << "************************************** \n";
 }
