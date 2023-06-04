@@ -1,15 +1,15 @@
-// For loop - use when you want something done for specified amount of times
+// Break - break out of the loop
+// Continue- skip current iteration
 #include <iostream>
 
 int main()
 {
-    for (int i = 1; i <= 10; i++)
+    for (int i = 1; i <= 20; i++)
     {
-        std::cout << i << '\n';
-    }
-
-    for (int i = 10; i >= 0; i--)
-    {
+        if (i == 13)
+        {
+            continue;
+        }
         std::cout << i << '\n';
     }
 }
