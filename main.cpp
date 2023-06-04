@@ -1,18 +1,35 @@
-// Logical Operators
-//&& || !
-
 #include <iostream>
 
 int main()
 {
-    bool sunny = true;
+    double temp;
+    char unit;
 
-    if (!sunny)
+    std::cout << "*** Temperature Conversion ***\n";
+    std::cout << "F = Fahrenheit\n";
+    std::cout << "C = Celcius\n";
+    std::cout << "What unit would you like to convert to (C/F): \n";
+    std::cin >> unit;
+
+    if (unit == 'F' || unit == 'f')
     {
-        std::cout << "It's cloudy today";
+        std::cout << "Enter the temperature in Celcius: ";
+        std::cin >> temp;
+
+        temp = (1.8 * temp) + 32.0;
+        std::cout << "Temperature is: " << temp << "F\n";
+    }
+    else if (unit == 'C' || unit == 'c')
+    {
+        std::cout << "Enter the temperature in Fahrenheit: ";
+        std::cin >> temp;
+
+        temp = (temp - 32) / 1.8;
+        std::cout << "Temperature is: " << temp << "C\n";
     }
     else
     {
-        std::cout << "It's sunny outside";
+        std::cout << "Please enter only C or F\n";
     }
+    std::cout << "*******************************\n";
 }
