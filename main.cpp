@@ -7,7 +7,10 @@ int main()
     std::cout << "Enter your name: ";
     std::getline(std::cin, name);
 
-    name.append("@gmail.com");
+    // name.at(0);
+    // name.insert(0, "@");
+    // name.find(' ');
+    name.erase(0, 3);
 
-    std::cout << "Your email is now " << name;
+    std::cout << name;
 }
