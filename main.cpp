@@ -1,44 +1,21 @@
+// Ternary operator
+// Condition? Expression1 : Expression2
+
 #include <iostream>
 
 int main()
 {
-    char op;
-    double num1;
-    double num2;
-    double result;
+    // int grade;
+    // std::cout << "What grade did you get? ";
+    // std::cin >> grade;
 
-    std::cout << "************* CALCULATOR ************* \n";
-    std::cout << "Enter either (+ - * /): ";
-    std::cin >> op;
+    // grade >= 60 ? std::cout << "you pass" : std::cout << "you fail";
 
-    std::cout << "Enter #1: ";
-    std::cin >> num1;
+    // int number = 4;
+    // number % 2 == 0 ? std::cout << "even" : std::cout << "odd";
 
-    std::cout << "Enter #2: ";
-    std::cin >> num2;
-
-    switch (op)
-    {
-    case '+':
-        result = num1 + num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '-':
-        result = num1 - num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '*':
-        result = num1 * num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    case '/':
-        result = num1 / num2;
-        std::cout << "Result: " << result << '\n';
-        break;
-    default:
-        std::cout << "Enter a valid operator." << '\n';
-        break;
-    }
-
-    std::cout << "************************************** \n";
+    bool hungry = true;
+    // hungry ? std::cout << "hungry" : std::cout << "not hungry"; //You don't have to explicitly write 'true' condition
+    // OR---
+    std::cout << (hungry ? "You are hungry" : "You are full");
 }

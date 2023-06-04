@@ -1,4 +1,2 @@
-
-    // a = pow(a, 2);   //reassign values
-    // b = pow(b, 2);
-    // c = sqrt(a + b);
+    // int number = 4;
+    // number % 2 == 0 ? std::cout << "even" : std::cout << "odd";
