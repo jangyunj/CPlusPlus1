@@ -1,24 +1,17 @@
 #include <iostream>
 
-double square(double length);
-double cube(double length);
+std::string concatStrings(std::string string1, std::string string2); // make sure to have Return type of the data type
 
 int main()
 {
-    double length = 2.0;
-    double area = square(length);
-    std::cout << "Area: " << area << "cm^2\n";
+    std::string firstName = "Yun";
+    std::string lastName = "Jang";
+    std::string fullName = concatStrings(firstName, lastName); // using arguments while invoking the function
 
-    double volume = cube(length);
-    std::cout << "Volume: " << volume << "cm^3\n";
+    std::cout << "Hello " << fullName;
 }
 
-double square(double length)
-{
-    return length * length;
-}
-
-double cube(double length)
-{
-    return length * length * length;
+std::string concatStrings(std::string string1, std::string string2)
+{ // make sure to have Return type of the data type
+    return string1 + " " + string2;
 }
