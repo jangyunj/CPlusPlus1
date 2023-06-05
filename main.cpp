@@ -3,15 +3,25 @@
 
 int main()
 {
+    srand(time(0));
 
-    srand(time(NULL)); // use srand fx.
-                       // seed is current calendar time
+    int randNum = rand() % 5 + 1;
 
-    int num1 = (rand() % 6) + 1; // Six sided dice 1-6
-    int num2 = (rand() % 6) + 1;
-    int num3 = (rand() % 6) + 1;
-
-    std::cout << num1 << '\n';
-    std::cout << num2 << '\n';
-    std::cout << num3 << '\n';
+    switch (randNum)
+    {
+    case 1:
+        std::cout << "You win a sticker\n";
+    case 2:
+        std::cout << "You win a bicycle\n";
+        break;
+    case 3:
+        std::cout << "You win a computer\n";
+        break;
+    case 4:
+        std::cout << "You win a book\n";
+        break;
+    case 5:
+        std::cout << "You win a tshirt\n";
+        break;
+    }
 }
