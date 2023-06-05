@@ -1,37 +1,13 @@
+//Function - block of reusable code
+
 #include <iostream>
-#include <ctime>
 
-int main()
-{
-    int num;
-    int guess;
-    int tries;
-
-    srand(time(NULL));
-    num = (rand() % 100) + 1;
-
-    std::cout << "********** Number guessing game **********\n";
-
-    do
-    {
-        std::cout << "Enter a guess between 1-100: ";
-        std::cin >> guess;
-        tries++;
-
-        if (guess > num)
-        {
-            std::cout << "Too high\n";
-        }
-        else if (guess < num)
-        {
-            std::cout << "Too low\n";
-        }
-        else
-        {
-            std::cout << "Correct!\n";
-            std::cout << "Number of tries: " << tries << '\n';
-        }
-    } while (guess != num);
-
-    std::cout << "*******************************************\n";
+void happyBirthday() {
+    std::cout << "Happy Birthday to you\n";
+    std::cout << "Happy Birthday to you\n";
+    std::cout << "Happy Birthday to Dear ...\n";
+    std::cout << "Happy Birthday to you\n\n";
+}
+int main() {
+    happyBirthday(); //Invoke/call a function
 }
