@@ -1,13 +1,18 @@
-//Function - block of reusable code
+// Function - block of reusable code
 
 #include <iostream>
 
-void happyBirthday() {
-    std::cout << "Happy Birthday to you\n";
-    std::cout << "Happy Birthday to you\n";
-    std::cout << "Happy Birthday to Dear ...\n";
-    std::cout << "Happy Birthday to you\n\n";
+void happyBirthday(std::string name);
+
+int main()
+{
+    std::string name = "Bro";
+    happyBirthday(name); // pass arguments
 }
-int main() {
-    happyBirthday(); //Invoke/call a function
+void happyBirthday(std::string name)
+{ // matching parameters
+    std::cout << "Happy Birthday to " << name << '\n';
+    std::cout << "Happy Birthday to " << name << '\n';
+    std::cout << "Happy Birthday dear " << name << '\n';
+    std::cout << "Happy Birthday to " << name << '\n';
 }
