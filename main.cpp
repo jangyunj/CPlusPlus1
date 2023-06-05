@@ -1,18 +1,24 @@
-// Function - block of reusable code
-
 #include <iostream>
 
-void happyBirthday(std::string name);
+double square(double length);
+double cube(double length);
 
 int main()
 {
-    std::string name = "Bro";
-    happyBirthday(name); // pass arguments
+    double length = 2.0;
+    double area = square(length);
+    std::cout << "Area: " << area << "cm^2\n";
+
+    double volume = cube(length);
+    std::cout << "Volume: " << volume << "cm^3\n";
 }
-void happyBirthday(std::string name)
-{ // matching parameters
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
-    std::cout << "Happy Birthday dear " << name << '\n';
-    std::cout << "Happy Birthday to " << name << '\n';
+
+double square(double length)
+{
+    return length * length;
+}
+
+double cube(double length)
+{
+    return length * length * length;
 }
