@@ -1,27 +1,14 @@
-// Function signature = function name + parameter (needs to be unique)
-//---Function Overload---
 #include <iostream>
-
-void Pizza();
-void Pizza(std::string topping1);
-void Pizza(std::string topping1, std::string topping2);
+int myNum = 3;
+void printNum();
 
 int main()
 {
-    Pizza();
-    Pizza("cheese");
-    Pizza("pepperoni", "ham");
+    printNum();
 }
 
-void Pizza()
+void printNum()
 {
-    std::cout << "You ordered a pizza\n";
-}
-void Pizza(std::string topping1)
-{
-    std::cout << "You ordered a " << topping1 << " pizza\n";
-}
-void Pizza(std::string topping1, std::string topping2)
-{
-    std::cout << "You ordered a " << topping1 << " and " << topping2 << " pizza\n";
+    int myNum = 3;
+    std::cout << myNum;
 }
