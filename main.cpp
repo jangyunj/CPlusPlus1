@@ -28,9 +28,11 @@ int main()
             break;
         case 2:
             balance += deposit();
+            showBalance(balance);
             break;
         case 3:
             balance -= withdraw(balance);
+            showBalance(balance);
             break;
         case 4:
             std::cout << "Thanks for visiting!\n";
@@ -46,5 +48,38 @@ void showBalance(double balance)
 }
 double deposit()
 {
+    double amount = 0;
+    std::cout << "Enter amount to deposit: $";
+    std::cin >> amount; // Amount - user input
+
+    if (amount > 0)
+    {
+        return amount;
+    }
+    else
+    {
+        std::cout << "That is not a valid amount ";
+        return 0;
+    }
 }
-double withdraw(double balance) {}
+double withdraw(double balance)
+{
+    double amount = 0;
+    std::cout << "Enter amount to withdraw: $";
+    std::cin >> amount;
+
+    if (amount > balance)
+    {
+        std::cout << "Insufficient funds\n";
+        return 0;
+    }
+    else if (amount < 0)
+    {
+        std::cout << "That is not a valid amount\n";
+        return 0;
+    }
+    else
+    {
+        return amount;
+    }
+}
