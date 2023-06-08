@@ -3,16 +3,17 @@
 
 #include <iostream>
 
+int myNum = 3; // Glocal variable
+
 void printNum();
 
 int main()
 {
-    int myNum = 1; // Local variable to the main function
     printNum();
+    std::cout << myNum;
 }
 
 void printNum()
 {
-    std::cout << myNum; // Won't work because myNum was not declared inside the function
-                        // Functions cannot see other functions
+    std::cout << myNum;
 }
