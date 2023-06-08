@@ -21,6 +21,10 @@ int main()
         std::cout << "4. Exit\n";
         std::cin >> choice;
 
+        std::cin.clear(); // Reset any error flags when standard input fails to interpret any input
+        fflush(stdin);    // *Function that clears the input buffer*
+                          // Flush is a command to clear the buffer (memory block of computer that acts as temporary placeholder) of a stream
+
         switch (choice)
         {
         case 1:
