@@ -9,11 +9,13 @@ void printNum();
 
 int main()
 {
+    int myNum = 2; // Local var takes precedence
+    std::cout << myNum << '\n';
     printNum();
-    std::cout << myNum;
 }
 
 void printNum()
 {
-    std::cout << myNum;
+    int myNum = 1; // Function will use local var first
+    std::cout << myNum << '\n';
 }
