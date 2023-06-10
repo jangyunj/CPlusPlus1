@@ -11,6 +11,8 @@ int main()
     char computer;
 
     player = getUserChoice();
+    std::cout << "Your choice: ";
+    showChoice(player);
 }
 
 char getUserChoice()
@@ -35,5 +37,19 @@ char getComputerChoice()
 {
     return 0;
 }
-void showChoice(char choice) {}
+void showChoice(char choice)
+{
+    switch (choice)
+    {
+    case 'r':
+        std::cout << "Rock\n";
+        break;
+    case 'p':
+        std::cout << "Paper\n";
+        break;
+    case 's':
+        std::cout << "Scissors\n";
+        break;
+    }
+}
 void chooseWinner(char player, char computer) {}
