@@ -1,89 +1,39 @@
 #include <iostream>
-#include <iomanip>
 
-void showBalance(double balance);
-double deposit();
-double withdraw(double balance);
+char getUserChoice();
+char getComputerChoice();
+void showChoice(char choice);
+void chooseWinner(char player, char computer);
 
 int main()
 {
-    double balance = 100;
-    int choice = 0;
+    char player;
+    char computer;
 
+    player = getUserChoice();
+}
+
+char getUserChoice()
+{
+    char player;
+    std::cout << "Rock-Paper-Scissors\n";
     do
     {
-        std::cout << "*****************\n";
-        std::cout << "Enter your choice:\n";
-        std::cout << "*****************\n";
-        std::cout << "1. Show Balance\n";
-        std::cout << "2. Deposit Money\n";
-        std::cout << "3. Withdraw Money\n";
-        std::cout << "4. Exit\n";
-        std::cin >> choice;
+        std::cout << "Choose one of the following\n";
+        std::cout << "*******************\n";
+        std::cout << "'r' for rock\n";
+        std::cout << "'p' for paper\n";
+        std::cout << "'s' for scissors\n";
+        std::cin >> player;
 
-        std::cin.clear(); // Reset any error flags when standard input fails to interpret any input
-        fflush(stdin);    // *Function that clears the input buffer*
-                          // Flush is a command to clear the buffer (memory block of computer that acts as temporary placeholder) of a stream
+    } while (player != 'r' && player != 'p' && player != 's');
+    // This prompt will repeat if the user enters something that is NOT r, p, s
 
-        switch (choice)
-        {
-        case 1:
-            showBalance(balance);
-            break;
-        case 2:
-            balance += deposit();
-            showBalance(balance);
-            break;
-        case 3:
-            balance -= withdraw(balance);
-            showBalance(balance);
-            break;
-        case 4:
-            std::cout << "Thanks for visiting!\n";
-            break;
-        default:
-            std::cout << "Invalid choice\n";
-        }
-    } while (choice != 4);
+    std::cout << player;
 }
-void showBalance(double balance)
+char getComputerChoice()
 {
-    std::cout << "Your balance is: $" << std::setprecision(2) << std::fixed << balance << '\n';
+    return 0;
 }
-double deposit()
-{
-    double amount = 0;
-    std::cout << "Enter amount to deposit: $";
-    std::cin >> amount; // Amount - user input
-
-    if (amount > 0)
-    {
-        return amount;
-    }
-    else
-    {
-        std::cout << "That is not a valid amount ";
-        return 0;
-    }
-}
-double withdraw(double balance)
-{
-    double amount = 0;
-    std::cout << "Enter amount to withdraw: $";
-    std::cin >> amount;
-
-    if (amount > balance)
-    {
-        std::cout << "Insufficient funds\n";
-        return 0;
-    }
-    else if (amount < 0)
-    {
-        std::cout << "That is not a valid amount\n";
-        return 0;
-    }
-    else
-    {
-        return amount;
-    }
-}
+void showChoice(char choice) {}
+void chooseWinner(char player, char computer) {}
