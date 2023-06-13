@@ -2,9 +2,13 @@
 
 int main()
 {
-    std::string car[] = {"corvette", "mustang", "camry"};
+    std::string cars[3]; // size of array
 
-    std::cout << car[0] << '\n';
-    std::cout << car[1] << '\n';
-    std::cout << car[2] << '\n';
+    cars[0] = "camaro";
+    cars[1] = "camry";
+    cars[2] = "jaguar";
+
+    std::cout << cars[0] << '\n';
+    std::cout << cars[1] << '\n';
+    std::cout << cars[2] << '\n';
 }
