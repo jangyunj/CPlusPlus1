@@ -1,20 +1,21 @@
 #include <iostream>
 
+double getTotal(double prices[], int size);
 int main()
 {
-    // Foreach - loop that eases the traversal over an iterable data set
-    //         - less flexible
+    double prices[] = {11.00, 50, 40.01};
+    int size = sizeof(prices) / sizeof(double);
+    double total = getTotal(prices, size);
 
-    char grades[] = {'A', 'B', 'C', 'D', 'F'};
+    std::cout << "$" << total;
+}
 
-    for (char grade : grades)
+double getTotal(double prices[], int size)
+{
+    double total = 0;
+    for (int i = 0; i < size; i++)
     {
-        std::cout << grade << '\n';
+        total += prices[i];
     }
-
-    int numbers[] = {10, 20, 30, 40};
-    for (int number : numbers)
-    {
-        std::cout << number << '\n';
-    }
+    return total;
 }
