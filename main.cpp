@@ -1,21 +1,38 @@
 #include <iostream>
 
-double getTotal(double prices[], int size);
+int searchArray(int array[], int size, int element);
+
 int main()
 {
-    double prices[] = {11.00, 50, 40.01};
-    int size = sizeof(prices) / sizeof(double);
-    double total = getTotal(prices, size);
+    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int size = sizeof(numbers) / sizeof(int);
+    int index;
 
-    std::cout << "$" << total;
+    int myNum;
+
+    std::cout << "Enter element to search for: " << '\n';
+    std::cin >> myNum;
+
+    index = searchArray(numbers, size, myNum);
+
+    if (index != -1)
+    {
+        std::cout << myNum << " is at index " << index;
+    }
+    else
+    {
+        std::cout << myNum << " is not in the array";
+    }
 }
 
-double getTotal(double prices[], int size)
+int searchArray(int array[], int size, int myNum)
 {
-    double total = 0;
     for (int i = 0; i < size; i++)
     {
-        total += prices[i];
+        if (array[i] == myNum)
+        {
+            return i;
+        }
     }
-    return total;
+    return -1; // sentinel value - not found
 }
