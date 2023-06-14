@@ -1,38 +1,37 @@
 #include <iostream>
 
-int searchArray(int array[], int size, int element);
+int getIndex(int numbers[], int size, int myNum);
 
 int main()
 {
-    int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
+    int numbers[] = {1, 2, 3, 4, 5};
+    int size = sizeof(numbers) / sizeof(int);
     int index;
-
     int myNum;
 
-    std::cout << "Enter element to search for: " << '\n';
+    std::cout << "Enter a number to search: ";
     std::cin >> myNum;
 
-    index = searchArray(numbers, size, myNum);
+    index = getIndex(numbers, size, myNum);
 
     if (index != -1)
     {
-        std::cout << myNum << " is at index " << index;
+        std::cout << myNum << " is at element " << index;
     }
     else
     {
-        std::cout << myNum << " is not in the array";
+        std::cout << myNum << " is not found";
     }
 }
 
-int searchArray(int array[], int size, int myNum)
+int getIndex(int numbers[], int size, int myNum)
 {
     for (int i = 0; i < size; i++)
     {
-        if (array[i] == myNum)
+        if (numbers[i] == myNum)
         {
             return i;
         }
     }
-    return -1; // sentinel value - not found
+    return -1;
 }
