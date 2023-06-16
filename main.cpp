@@ -1,37 +1,20 @@
 #include <iostream>
 
-int getIndex(std::string foods[], int size, std::string myFood);
-
 int main()
 {
-    std::string foods[] = {"pizza", "hotdog", "hamburger"};
-    int size = sizeof(foods) / sizeof(int);
-    int index;
-    std::string myFood;
+    std::string foods[5];
+    int size = sizeof(foods) / sizeof(std::string);
 
-    std::cout << "Enter food to search for: ";
-    std::getline(std::cin, myFood);
-
-    index = getIndex(foods, size, myFood);
-
-    if (index != -1)
-    {
-        std::cout << myFood << " is at index " << index;
-    }
-    else
-    {
-        std::cout << myFood << " is not in the array ";
-    }
-}
-
-int getIndex(std::string foods[], int size, std::string myFood)
-{
     for (int i = 0; i < size; i++)
     {
-        if (foods[i] == myFood)
-        {
-            return i;
-        }
+        std::cout << "Enter food you like #" << i + 1 << ":";
+        std::getline(std::cin, foods[i]);
     }
-    return -1;
+
+    std::cout << "You like the following food: \n";
+
+    for (std::string food : foods)
+    {
+        std::cout << food << '\n';
+    }
 }
