@@ -1,34 +1,34 @@
 #include <iostream>
 
-int getIndex(int numbers[], int size, int myNum);
+int getIndex(std::string foods[], int size, std::string myFood);
 
 int main()
 {
-    int numbers[] = {1, 2, 3, 4, 5};
-    int size = sizeof(numbers) / sizeof(int);
+    std::string foods[] = {"pizza", "hotdog", "hamburger"};
+    int size = sizeof(foods) / sizeof(int);
     int index;
-    int myNum;
+    std::string myFood;
 
-    std::cout << "Enter a number to search: ";
-    std::cin >> myNum;
+    std::cout << "Enter food to search for: ";
+    std::getline(std::cin, myFood);
 
-    index = getIndex(numbers, size, myNum);
+    index = getIndex(foods, size, myFood);
 
     if (index != -1)
     {
-        std::cout << myNum << " is at element " << index;
+        std::cout << myFood << " is at index " << index;
     }
     else
     {
-        std::cout << myNum << " is not found";
+        std::cout << myFood << " is not in the array ";
     }
 }
 
-int getIndex(int numbers[], int size, int myNum)
+int getIndex(std::string foods[], int size, std::string myFood)
 {
     for (int i = 0; i < size; i++)
     {
-        if (numbers[i] == myNum)
+        if (foods[i] == myFood)
         {
             return i;
         }
