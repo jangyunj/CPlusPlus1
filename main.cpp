@@ -2,8 +2,6 @@
 
 int main()
 {
-    int i = 3, j = ++i, k = ++i;
-    std::cin >> i;
-
-    std::cout << k + i << j - i << i * i; // Result: 10-125
+    float x = 1. / 2. + 2. / 4.; // Division first, then add both
+    std::cout << x;
 }
