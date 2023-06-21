@@ -2,9 +2,8 @@
 
 int main()
 {
-    int i = 1;
-    int j = ++i;
-    int k = j++; // still 2; not increased yet; it will increase at the end of the loop
+    int i = 3, j = ++i, k = ++i;
+    std::cin >> i;
 
-    std::cout << k;
+    std::cout << k + i << j - i << i * i; // Result: 10-125
 }
