@@ -2,11 +2,9 @@
 
 int main()
 {
-    std::string name = "bro";
-    int age = 21;
-    bool isStudent = true;
+    int i = 1;
+    int j = ++i;
+    int k = j++; // still 2; not increased yet; it will increase at the end of the loop
 
-    std::cout << &name << '\n';
-    std::cout << &age << '\n';
-    std::cout << &isStudent << '\n';
+    std::cout << k;
 }
