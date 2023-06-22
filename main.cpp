@@ -1,9 +1,14 @@
 #include <iostream>
+#include <vector>
 
 int main()
 {
-    float x = 1.0 / 4.0;
-    int i = x;
+    char arr[] = {'a', 'b', 'c'};
 
-    std::cout << i; // i is "int"
+    for (int i = 1; i < arr.size(); i++) {
+        std::cout << "*";
+        if ((arr[i] - arr[i - 1]) / 2)
+            continue;
+        std::cout << "*";
+    }
 }
