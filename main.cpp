@@ -1,14 +1,13 @@
-#include <iostream>
-#include <vector>
+int nums[] = {1, 2, 3, 4, 5};
 
-int main()
+for (int i = 0; i < nums.size(); i++)
 {
-    char arr[] = {'a', 'b', 'c'};
-
-    for (int i = 1; i < arr.size(); i++) {
-        std::cout << "*";
-        if ((arr[i] - arr[i - 1]) / 2)
-            continue;
-        std::cout << "*";
+    for (int j = i + 1; j < nums.size(); j++)
+    {
+        if (nums[i] + nums[j] == target)
+        {
+            return {i, j};
+        }
     }
 }
+return {};
