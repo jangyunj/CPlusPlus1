@@ -1,15 +1,20 @@
-// Add two sums
+#include <iostream>
 
-int nums[] = {1, 2, 3, 4, 5};
-
-for (int i = 0; i < nums.size(); i++)
+int main()
 {
-    for (int j = i + 1; j < nums.size(); j++)
-    {
-        if (nums[i] + nums[j] == target)
-        {
-            return {i, j};
-        }
-    }
+    // pointers = variable that stores memory address of another variable
+    //& address of operator
+    //* dereference operator
+
+    std::string name = "Bro";
+    int age = 21;
+    std::string freePizzas[5] = {"pizza1", "pizza2", "pizza3", "pizza4", "pizza5"};
+
+    std::string *pName = &name; // pointer is pointing to the name address variable
+    int *pAge = &age;
+    std::string *pFreePizzas = freePizzas;
+
+    std::cout << *pName; // accessing the VALUE at this memory location
+    std::cout << *pAge;
+    std::cout << *pFreePizzas;
 }
-return {};
