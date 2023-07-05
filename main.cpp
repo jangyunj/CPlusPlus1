@@ -1,21 +1,14 @@
 #include <iostream>
-// Recursion approach - function inside of a function; used for sorting & searching algorithms
+template <typename T, typename U>
 
-int factorial(int num);
+// function template
+
+auto max(T x, U y)
+{
+    return x > y ? x : y;
+}
 
 int main()
 {
-    std::cout << factorial(5);
-}
-
-int factorial(int num)
-{
-    if (num > 1)
-    {
-        return num * factorial(num - 1);
-    }
-    else
-    {
-        return 1;
-    }
+    std::cout << max(3, 4.1) << '\n';
 }
