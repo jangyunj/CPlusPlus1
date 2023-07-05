@@ -1,25 +1,17 @@
 #include <iostream>
+// Iterative approach
+int factorial(int num);
 
 int main()
 {
-    char *pGrades = NULL;
-    int size;
+}
 
-    std::cout << "How many grades to enter: ";
-    std::cin >> size;
-
-    pGrades = new char[size];
-
-    for (int i = 0; i < size; i++)
+int factorial(int num)
+{
+    int result = 1;
+    for (int i = 1; i <= num; i++)
     {
-        std::cout << "Enter grade #" << i + 1 << ": ";
-        std::cin >> pGrades[i];
+        result = result * i
     }
-
-    for (int i = 0; i < size; i++)
-    {
-        std::cout << pGrades[i] << " ";
-    }
-
-    delete[] pGrades;
+    return result;
 }
