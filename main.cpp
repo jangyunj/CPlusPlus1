@@ -5,7 +5,7 @@
 
 int main()
 {
-    int *pNum = NULL;
+    int *pNum = NULL; // set to null since not assigning to pointer right away
     pNum = new int;
     *pNum = 21;
 
