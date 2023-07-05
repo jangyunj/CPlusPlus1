@@ -1,16 +1,25 @@
 #include <iostream>
-// Dynamic memory - stores in HEAP rather than stack
-//                - allocated after the program is already compiled and running
-//                - useful when we don't know how much memory we'll need; more flexible
 
 int main()
 {
-    int *pNum = NULL; // set to null since not assigning to pointer right away
-    pNum = new int;
-    *pNum = 21;
+    char *pGrades = NULL;
+    int size;
 
-    std::cout << "address: " << pNum << '\n';
-    std::cout << "value: " << *pNum << '\n';
+    std::cout << "How many grades to enter: ";
+    std::cin >> size;
 
-    delete pNum; // freeing up the memory at the end
+    pGrades = new char[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << "Enter grade #" << i + 1 << ": ";
+        std::cin >> pGrades[i];
+    }
+
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << pGrades[i] << " ";
+    }
+
+    delete[] pGrades;
 }
