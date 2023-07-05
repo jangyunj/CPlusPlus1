@@ -1,17 +1,21 @@
 #include <iostream>
-// Iterative approach
+// Recursion approach - function inside of a function; used for sorting & searching algorithms
+
 int factorial(int num);
 
 int main()
 {
+    std::cout << factorial(5);
 }
 
 int factorial(int num)
 {
-    int result = 1;
-    for (int i = 1; i <= num; i++)
+    if (num > 1)
     {
-        result = result * i
+        return num * factorial(num - 1);
     }
-    return result;
+    else
+    {
+        return 1;
+    }
 }
