@@ -1,7 +1,7 @@
 #include <iostream>
 template <typename T, typename U>
 
-// function template
+// function template - compatible with different data types; don't need to write multiple fx
 
 auto max(T x, U y)
 {
