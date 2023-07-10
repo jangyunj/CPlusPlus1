@@ -1,33 +1,42 @@
 #include <iostream>
-using namespace std;
 
-class Cookie
-{
-private:
-    string color;
+class Node{
+    public:
+        int value;
+        Node* next;
 
-public:
-    Cookie(string color)
-    {
-        this->color = color;
-    }
-    string getColor()
-    {
-        return color;
+    Node(int value) {
+        this->value = value;
+        next = nullptr;
     }
 
-    void setColor(string color)
-    {
-        this->color = color;
-    }
+};
+class LinkedList {
+    private:
+        Node* head;
+        Node* tail;
+        int length;
+
+    public:
+        LinkedList(int value) {
+            Node* newNode = new Node(value);
+            head = newNode;
+            tail = newNode;
+            length= 1;
+        }
+
+
+
+
+
+    LinkedList(int value);
+    void append(int value);
+    void prepend(int value);
+    bool insert(int index, int value);
 };
 
-int main()
-{
-    Cookie *cookieOne = new Cookie("green");
-    Cookie *cookieTwo = new Cookie("blue");
 
-    cookieOne->setColor("yellow");
-    std::cout << "C1: " << cookieOne->getColor() << endl;
-    std::cout << "C2: " << cookieTwo->getColor() << endl;
+
+int main() {
+
 }
