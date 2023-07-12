@@ -1,42 +1,16 @@
+// Literals - values such as numbers, characters, or string of characters whose values are self-evident
+// integer literals - decimal, octal, hexadecimal
+// Octal- 0
+// Hexadecimal - Ox, OX
 #include <iostream>
 
-class Node{
-    public:
-        int value;
-        Node* next;
-
-    Node(int value) {
-        this->value = value;
-        next = nullptr;
-    }
-
-};
-class LinkedList {
-    private:
-        Node* head;
-        Node* tail;
-        int length;
-
-    public:
-        LinkedList(int value) {
-            Node* newNode = new Node(value);
-            head = newNode;
-            tail = newNode;
-            length= 1;
-        }
-
-
-
-
-
-    LinkedList(int value);
-    void append(int value);
-    void prepend(int value);
-    bool insert(int index, int value);
-};
-
-
-
-int main() {
-
+int main()
+{
+    int n, m, o;
+    n = 25;
+    m = 031;
+    o = 0x19;
+    std::cout << n << std::endl
+              << m << std::endl
+              << o;
 }
