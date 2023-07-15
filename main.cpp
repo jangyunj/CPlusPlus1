@@ -4,6 +4,6 @@ using namespace std;
 
 int main()
 {
-    int i = 3, j = ++i, k = ++i;
+    int i = 1, j = ++i, k = j++;
     cout << k << j << i;
 }
