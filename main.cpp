@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-    int i = 3, j = ++i, k = ++i;
-    cin >> i;
-    cout << k + i << j - i << i * i;
+    float x = 1./2.+2./4.;
+    cout << x;
 }
