@@ -2,14 +2,11 @@
 
 int main()
 {
-   int i = 3, j, k;
+   int i = 1;
+   int j = ++i;
+   int k = j++;
 
-   if (i > 0)
-      j = 2 + i * i;
-   if (j >= 0)
-      k = j % i + 2;
-   if (k >= 0)
-      k = j % i % k; // int k = 11 % 3 % 4;
-
+   std::cout << i;
+   std::cout << j;
    std::cout << k;
 }
