@@ -1,14 +1,15 @@
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 int main()
 {
-   int i = 5, j = 0;
-   while (i > 0)
+   vector<string> arr{"apple", "banana", "cherry"};
+   int index = 0;
+   while (index < arr.size())
    {
-      i--;
-      j++;
+      string element = arr.at(index);
+      cout << element << endl;
+      index++;
    }
-   cout << j;
 }
