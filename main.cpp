@@ -1,12 +1,15 @@
 #include <iostream>
+#include <vector>
 
 int main()
 {
-   int i = 1;
-   int j = ++i;
-   int k = j++;
+   std::vector<char> arr = {'a', 'b', 'c'};
 
-   std::cout << i;
-   std::cout << j;
-   std::cout << k;
+   for (int i = 1; i < arr.size(); i++)
+   {
+      std::cout << "*";
+      if ((arr[i] - arr[i - 1]) % 2)
+         continue;
+      std::cout << "*";
+   }
 }
