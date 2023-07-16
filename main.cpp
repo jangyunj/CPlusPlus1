@@ -1,15 +1,14 @@
 #include <iostream>
-#include <vector>
+
+using namespace std;
 
 int main()
 {
-   std::vector<char> arr = {'a', 'b', 'c'};
-
-   for (int i = 1; i < arr.size(); i++)
+   int i = 5, j = 0;
+   while (i > 0)
    {
-      std::cout << "*";
-      if ((arr[i] - arr[i - 1]) % 2)
-         continue;
-      std::cout << "*";
+      i--;
+      j++;
    }
+   cout << j;
 }
