@@ -4,6 +4,11 @@ using namespace std;
 
 int main()
 {
-   int i = 0, j = i++, k = --i;
-   cout << i << j << k;
+   bool yes = !false;
+   bool no = !yes;
+
+   if (!no)
+      cout << "true";
+   else
+      cout << "false";
 }
