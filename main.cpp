@@ -1,14 +1,26 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int main()
-{
-   bool yes = !false;
-   bool no = !yes;
+struct Str {
+   int in;
+   char ch;
+};
 
-   if (!no)
-      cout << "true";
-   else
-      cout << "false";
+int main() {
+   vector<Str> t = {{1, 'a'}, {2, 'b'}};
+   for (int i = 0; i < 2; i++) {
+      t[i].in += (t[1 - i].ch - t[i].ch);
+   } 
+   cout << t[0].in << t[1].in;
+}
+
+
+int main() {
+   vector<Str> t = {{1, 'a'}, {2, 'b'}};
+   for (int i = 0; i < 2; i++) {
+      t[i].in += (t[1 - i].ch - t[i].ch);
+   }
+   cout << t[0].in;
 }
