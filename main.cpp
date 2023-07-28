@@ -1,26 +1,21 @@
 #include <iostream>
-#include <vector>
+#include <stdio.h>
 
 using namespace std;
 
-struct Str {
-   int in;
-   char ch;
-};
+int main()
+{
+   int n;
+   cout << "Enter size: ";
+   cin >> n;
 
-int main() {
-   vector<Str> t = {{1, 'a'}, {2, 'b'}};
-   for (int i = 0; i < 2; i++) {
-      t[i].in += (t[1 - i].ch - t[i].ch);
-   } 
-   cout << t[0].in << t[1].in;
-}
+   int A[n];
 
+   A[0] = 20;
+   A[1] = 30;
 
-int main() {
-   vector<Str> t = {{1, 'a'}, {2, 'b'}};
-   for (int i = 0; i < 2; i++) {
-      t[i].in += (t[1 - i].ch - t[i].ch);
+   for (int x : A)
+   {
+      cout << x << endl; // Random numbers instead of 0 could be assigned
    }
-   cout << t[0].in;
 }
