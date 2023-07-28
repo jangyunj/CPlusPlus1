@@ -1,21 +1,17 @@
 #include <iostream>
-#include <stdio.h>
 
 using namespace std;
 
+struct Rectangle
+{
+   int length;
+   int width;
+}; // r1, r2, r3; <- you can also declare variables here
+
 int main()
 {
-   int n;
-   cout << "Enter size: ";
-   cin >> n;
+   struct Rectangle r1 = {10, 5};
 
-   int A[n];
-
-   A[0] = 20;
-   A[1] = 30;
-
-   for (int x : A)
-   {
-      cout << x << endl; // Random numbers instead of 0 could be assigned
-   }
+   // printf("Hello world");
+   printf("%d", sizeof(r1)); // length and width are ints and 4 bytes each
 }
