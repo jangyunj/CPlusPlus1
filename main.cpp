@@ -2,17 +2,24 @@
 
 using namespace std;
 
+struct Rectangle
+{
+   int length;
+   int width;
+};
+
 int main()
 {
-   int *p;
-   p = new int[5]; // memory in HEAP
-   p[0] = 10;
-   p[1] = 15;
-   p[2] = 1;
+   int *p1;
+   char *p2;
+   float *p3;
+   double *p4;
+   struct Rectangle *p5;
 
-   for (int i = 0; i < 5; i++)
-   {
-      cout << p[i] << endl;
-      delete[] p; // DEALLOCATING the memory allocated in heap- free up the space
-   }
+   // All pointers are 8 BYTES regardless of data type
+   cout << sizeof(p1) << endl;
+   cout << sizeof(p2) << endl;
+   cout << sizeof(p3) << endl;
+   cout << sizeof(p4) << endl;
+   cout << sizeof(p5) << endl;
 }
