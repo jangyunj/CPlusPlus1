@@ -2,24 +2,17 @@
 
 using namespace std;
 
-struct Rectangle
-{
-   int length;
-   int width;
-};
-
 int main()
 {
-   int *p1;
-   char *p2;
-   float *p3;
-   double *p4;
-   struct Rectangle *p5;
+   int a = 10;
+   int &r = a; // REFERNCES needs to be initialized at the time of declaration
+               // Another name for a variable
+               // r is a
+               // r does not consume memory - same memory as a
 
-   // All pointers are 8 BYTES regardless of data type
-   cout << sizeof(p1) << endl;
-   cout << sizeof(p2) << endl;
-   cout << sizeof(p3) << endl;
-   cout << sizeof(p4) << endl;
-   cout << sizeof(p5) << endl;
+   int b = 30;
+   r = b; // Now r is changed to 30, so a is also 30
+
+   cout << a << endl
+        << r;
 }
