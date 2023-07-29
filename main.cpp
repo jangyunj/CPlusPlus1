@@ -10,11 +10,14 @@ struct Rectangle
 
 int main()
 {
+   int A[5] = {2, 4, 6, 8, 10}; // created in Stack
+   int *p;
 
-   struct Rectangle r1;
-   r1.length = 10;
-   r1.width = 5;
+   p = A; // Arrays don't need &
+          // OR p = &A[0];
 
-   cout << r1.length << endl;
-   cout << r1.width << endl;
+   for (int i = 0; i < 5; i++)
+   {
+      cout << p[i];
+   }
 }
