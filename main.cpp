@@ -2,22 +2,16 @@
 
 using namespace std;
 
-struct Rectangle
-{
-   int length;
-   int width;
-};
-
 int main()
 {
-   int A[5] = {2, 4, 6, 8, 10}; // created in Stack
    int *p;
-
-   p = A; // Arrays don't need &
-          // OR p = &A[0];
+   p = new int[5]; // memory in HEAP
+   p[0] = 10;
+   p[1] = 15;
+   p[2] = 1;
 
    for (int i = 0; i < 5; i++)
    {
-      cout << p[i];
+      cout << p[i] << endl;
    }
 }
