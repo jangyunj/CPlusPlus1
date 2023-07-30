@@ -2,17 +2,19 @@
 
 using namespace std;
 
+struct Rectangle
+{
+   int length;
+   int width;
+};
+
 int main()
 {
-   int a = 10;
-   int &r = a; // REFERNCES needs to be initialized at the time of declaration
-               // Another name for a variable
-               // r is a
-               // r does not consume memory - same memory as a
+   Rectangle r = {10, 5};
+   cout << r.length << endl; // Normal variable uses dot operator
+   cout << r.width << endl;
 
-   int b = 30;
-   r = b; // Now r is changed to 30, so a is also 30
-
-   cout << a << endl
-        << r;
+   Rectangle *p = &r;
+   cout << p->length << endl; // Pointer to a structure requires arrow
+   cout << p->width << endl;
 }
