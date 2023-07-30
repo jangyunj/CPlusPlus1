@@ -10,11 +10,13 @@ struct Rectangle
 
 int main()
 {
-   Rectangle r = {10, 5};
-   cout << r.length << endl; // Normal variable uses dot operator
-   cout << r.width << endl;
+   Rectangle *p;
+   p = new Rectangle; // Creates Rectangle object in HEAP
+                      // Dynamic allocation of structure
 
-   Rectangle *p = &r;
-   cout << p->length << endl; // Pointer to a structure requires arrow
+   p->length = 15;
+   p->width = 7;
+
+   cout << p->length << endl;
    cout << p->width << endl;
 }
