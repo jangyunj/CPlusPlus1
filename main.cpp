@@ -2,35 +2,21 @@
 
 using namespace std;
 
-void swap(int *x, int *y)
-{ // Indirectly accessing address of num1, num2
-   int temp;
-   temp = *x;
-   *x = *y;
-   *y = temp;
+void fun(int A[], int n) // OR void fun(int *A, int n)
+{
+   for (int i = 0; i < n; i++)
+   {
+      cout << A[i] << endl;
+   }
 }
 
 int main()
 {
-   int num1 = 10, num2 = 15;
-   swap(&num1, &num2); // Address of actual parameters are passed because the formal parameters are pointers
-
-   cout << "Num1: " << num1 << endl;
-   cout << "Num2: " << num2 << endl;
-}
-
-void swap(int x, int y)
-{
-   int temp;
-   temp = x;
-   x = y;
-   y = temp;
-}
-
-int main()
-{
-   int num1 = 10, num2 = 15;
-   swap(num1, num2);
-   cout << "Num1: " << num1 << endl;
-   cout << "Num2: " << num2 << endl;
+   int A[] = {2, 4, 6, 8, 10};
+   int n = 5;
+   fun(A, n);
+   for (int x : A)
+   {
+      cout << x << " ";
+   }
 }
